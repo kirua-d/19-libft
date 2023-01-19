@@ -28,13 +28,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	if (haystack[i] == '\0')
 	{
-		return ("NULL");
+		return (NULL);
 	}
 	if (haystack[i] == needle[0] && ft_strncmp(&haystack[i], needle, size) == 0)
 	{
 		return ((char *)&haystack[i]);
 	}
-	return ("NULL");
+	return (NULL);
 }
 /*
 #include <stdio.h>
