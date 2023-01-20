@@ -18,6 +18,6 @@ void ft_putstr_fd(char *s, int fd)
 
 	if (!s || fd < 0)
 		return ;
-	i = strlen(s);
+	i = ft_strlen(s);
 	write(fd, s, i);
 }

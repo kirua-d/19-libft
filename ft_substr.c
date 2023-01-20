@@ -18,6 +18,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     char *newChaine;
     int  i;
 
+    if (ft_strlen(s) < len)
+		len = ft_strlen(s);
     i = 0;
     newChaine = malloc((1 + len) * sizeof(char));
     if (!newChaine)
