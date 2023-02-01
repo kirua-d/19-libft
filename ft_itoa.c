@@ -12,13 +12,14 @@
 
 #include "libft.h"
 #include <stdio.h>
-int	ft_intLen(long int n)
+
+int	ft_intlen(long int n)
 {
 	int	i;
 
 	i = 0;
 	if (n == 0)
-		return(1);
+		return (1);
 	if (n < 0)
 	{
 		n = -1 * n;
@@ -32,14 +33,14 @@ int	ft_intLen(long int n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*integer;
 	long int	nbr;
 	int			len;
 
 	nbr = n;
-	len = ft_intLen(nbr);
+	len = ft_intlen(nbr);
 	integer = malloc((len + 1) * sizeof(char));
 	if (!integer)
 		return (NULL);

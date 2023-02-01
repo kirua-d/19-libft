@@ -10,33 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *newChaine;
-    int  i;
+	char	*newchaine;
+	size_t	i;
 
-    if (ft_strlen(s) < len)
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < len)
 		len = ft_strlen(s);
-    i = 0;
-    newChaine = malloc((1 + len) * sizeof(char));
-    if (!newChaine)
-        return (NULL);
-    if (start > (unsigned int)ft_strlen(s))
+	i = 0;
+	newchaine = malloc((1 + len) * sizeof(char));
+	if (!newchaine)
+		return (NULL);
+	if (start > (unsigned int)ft_strlen(s))
 	{
-		newChaine[0] = '\0';
-		return (newChaine);
+		newchaine[0] = '\0';
+		return (newchaine);
 	}
-    while (len != 0)
-    {
-        newChaine[i] = s[start];
-        start++;
-        len--;
-        i++;
-    }
-    newChaine[i] = '\0';
-    return (newChaine);
-    
+	while (s[start] && (len > i))
+	{
+		newchaine[i] = s[start];
+		start++;
+		i++;
+	}
+	newchaine[i] = '\0';
+	return (newchaine);
 }

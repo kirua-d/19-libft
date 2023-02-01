@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    char    *hope;
-    int     value;
+	char	*hope;
+	int		value;
 
-    hope = malloc(count * size);
-    if (!hope)
-        return (NULL);
-    value = count * size;
-    while (value--)
-        hope[value] = '\0';
-    return(hope);
+	hope = malloc(count * size);
+	if (!hope)
+		return (NULL);
+	value = count * size;
+	while (value--)
+		hope[value] = '\0';
+	return (hope);
 }

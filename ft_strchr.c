@@ -16,20 +16,29 @@ char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	*pointeur;
+	char	str;
 
-	pointeur = NULL;
 	i = 0;
+	str = c;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == str)
 		{
 			pointeur = (char *) &s[i];
 			return (pointeur);
 		}
 		i++;
 	}
-	if (s[i] == (char) c)
+	if (s[i] == str)
+	{
 		pointeur = (char *) &s[i];
 		return (pointeur);
+	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	const char *s = "teste";
+// 	printf("%s %s",strchr(s, 'e') , ft_strchr(s, 'e'));
+// }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f) (unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
 	char	*chain;
 	size_t	i;
@@ -26,7 +26,7 @@ char *ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	while (s[i] != '\0')
 	{
 		chain[i] = f (i, s[i]);
-		i++; 
+		i++;
 	}
 	chain[i] = '\0';
 	return (chain);

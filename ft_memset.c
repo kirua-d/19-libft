@@ -14,7 +14,7 @@
 void	*ft_memset(void *str, int c, size_t len)
 {
 	size_t		i;
-	char	*switchchar;
+	char		*switchchar;
 
 	switchchar = (char *) str;
 	i = 0;
