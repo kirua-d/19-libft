@@ -33,14 +33,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)&haystack[i]);
 	}
 	return (NULL);
-	if (haystack[i] == '\0')
-		return (NULL);
 }
-/*
-#include <stdio.h>
-int	main()
-{
-	char *a = "jambon halalhjcbhvhbghbfghbgbf";
-	char *b = "l";
-	printf("%s %s", ft_strnstr(a, b, 2),strnstr(a, b, 2));
-}*/

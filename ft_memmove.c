@@ -32,16 +32,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
 	return (dst);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int main(void)
 {
-	char	src[240] = "salut daoud";
-	char	dest[240] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-	int		len = 225;
+	char	src[11] = "salut daoud";
+	char	dest[25] = "bonjour";
+	int		len = 10;
 
-	printf("%s\n", ft_memmove(dest + 3, src, len));
+	printf("%s\n", ft_memmove(dest, src, len));
 
-}
-*/
+}*/
